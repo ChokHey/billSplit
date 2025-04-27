@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旅行费用AA计算器</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>旅行费用AA计算器</h1>
+        
+        <div class="input-section">
+            <h2>粘贴聊天记录</h2>
+            <div class="input-group">
+                <textarea id="chatInput" placeholder="请直接粘贴微信群聊天记录，格式如：
+-张三:
+机票:1000
+
+-李四:
+酒店:800"></textarea>
+                <button onclick="parseChat()">解析记录</button>
+            </div>
+        </div>
+
+        <div class="expenses-section">
+            <h2>费用记录</h2>
+            <div id="expensesList"></div>
+        </div>
+
+        <div class="result-section">
+            <h2>结算结果</h2>
+            <div id="resultDetails"></div>
+            <div id="finalResult"></div>
+        </div>
+
+        <div class="actions">
+            <button onclick="calculate()">计算AA</button>
+            <button onclick="clearAll()">清空记录</button>
+            <button onclick="exportData()">导出数据</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
